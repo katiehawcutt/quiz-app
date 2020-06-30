@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Science & Nature Quiz</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Raleway&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <img src="./plant.png" />
+      <h1>Science & Nature Quiz</h1>
+      <img src="./plant.png" />
+    </div>
+    <div class="main-container">
+      <div class="column-container">
+        <div id="questionNumber" class="text question-number"></div>
+        <h3>True or False?</h3>
+        <div id="question" class="text"></div>
+        <button id="playerTrue" class="trueFalse" onclick="checkAnswer('True')">
+          True
+        </button>
+        <button
+          id="playerFalse"
+          class="trueFalse"
+          onclick="checkAnswer('False')"
+        >
+          False
+        </button>
+      </div>
+      <div class="column-container middle">
+        <button id="startButton" onclick="getQuestion()" class="start">
+          Start
+        </button>
+        <button
+          id="answerButton"
+          onclick="getAnswer(),changeContainerColor(),updateScoreBoard()"
+          class="answer"
+        >
+          Get answer
+        </button>
+        <button id="nextButton" onclick="nextQuestion()" class="next">
+          Next question
+        </button>
+        <div class="scoreboard">
+          <h3 class="score">Score:</h3>
+          <div id="scoreBoard" class="text score">0/10</div>
+        </div>
+      </div>
+      <div class="column-container answer" id="answerContainer">
+        <h3 id="correctOrWrong"></h3>
+        <h3 id="answer" class="answer">?</h3>
+      </div>
+      <div class="pop-up-box" id="popUpBox">
+        <h1>Game Over!</h1>
+        <img src="./plant.png" />
+        <h3 id="finalScore"></h3>
+
+        <button class="close" onclick="prepareNewGame()">X</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

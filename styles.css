@@ -1,0 +1,181 @@
+body {
+  margin: 0px;
+}
+h1 {
+  font-family: Julius Sans One;
+  font-size: 50px;
+  margin: 0px;
+}
+h3 {
+  font-family: Julius Sans One;
+  font-size: 40px;
+  color: #177044;
+  text-align: center;
+  margin: 0px;
+}
+h3.score {
+  margin: 5px;
+}
+h3.answer {
+  color: #d95858;
+  text-align: center;
+  font-size: 70px;
+  margin: 0px;
+}
+
+.header {
+  height: 19.5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.5vh black solid;
+  margin: 0px;
+}
+img {
+  height: 80px;
+  width: 80px;
+}
+.main-container {
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("./leaves.jpg");
+}
+.column-container {
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: black solid 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.column-container.middle {
+  background: none;
+  border-radius: none;
+  border: none;
+}
+.column-container.answer {
+  justify-content: center;
+}
+
+button {
+  height: 80px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #b9e2b6;
+  border: black solid 3px;
+  font-family: Julius Sans One;
+  font-size: 30px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.trueFalse {
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+
+button.answer {
+  display: none;
+}
+button.next {
+  display: none;
+}
+.scoreboard {
+  height: 200px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: black solid 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text {
+  font-family: Raleway;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+}
+.text.score {
+  font-size: 40px;
+  color: #d95858;
+}
+
+.text.question-number {
+  border-radius: 20px;
+}
+.pop-up-box {
+  height: 400px;
+  width: 500px;
+  border-radius: 20px;
+  border: 3px black solid;
+  background-image: linear-gradient(#f4c964, #b9e2b6);
+  left: 50%;
+  transform: translate(-50%);
+  top: 25%;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+#popUpBox {
+  animation-name: pop-up;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  /* animation-delay: 0.5s; */
+  animation-fill-mode: forwards;
+}
+@keyframes pop-up {
+  0% {
+    transform: translate(-50%) scale(0.2) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%) scale(0.4) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50%) scale(0.6) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50%) scale(0.8) rotate(270deg);
+  }
+  100% {
+    transform: translate(-50%) scale(1) rotate(360deg);
+  }
+}
+
+button.close {
+  height: 40px;
+  width: 100px;
+  background-color: #d95858;
+  font-size: 20px;
+  font-weight: bold;
+}
+.background-opacity::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 0.6;
+}
