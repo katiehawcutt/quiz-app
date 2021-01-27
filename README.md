@@ -8,10 +8,41 @@ _I am really pleased with how quickly I managed to create this quiz. It was pret
 
 ### Main Learning Points:
 
-- I used fetch() to get the information from the quiz API. Although I've used fetch() before (in the Kanye West Quote Generator) it was much easier to display / format the data I received back in that project because it only sent me one quote at a time. All I had to do in that instance was display the whole object / all the data at once. This quiz API gave me back a JavaScript object with the questions and answers to ten questions which I obviously did not want to show all at once. So I accessed the object properties and displayed the questions / answers seperately and used a variable called index (var index = 0) which I used to display one question at at time (index + 1 after each question).
+- I used fetch() to get the information from the quiz API. Although I've used fetch() before (in the Kanye West Quote Generator) it was much easier to display / format the data I received back in that project because it only sent me one quote at a time. All I had to do in that instance was display the whole object / all the data at once. This quiz API gave me back a JavaScript object with the questions and answers to ten questions which I obviously did not want to show all at once. So I accessed the object properties and displayed the questions / answers separately and used a variable called index (var index = 0) which I used to display one question at at time (index + 1 after each question).
 
 - I made a true / false style of quiz in which the user selects which answer they want by pressing a true or false button which changes color when selected. This worked perfectly to start with until my partner pressed both buttons (he 'changed his mind'...) and it broke. Both buttons changed color and then the first answer was taken as the users answer, therefore resulting in the wrong answer. So I had to make the app 'user accident proof!' and made it so only one button could change color at once and the last answer selected was the one carried forward. This was a good lesson in user experience / making the app more robust.
 
 - I used some animation on the pop-up final score box which I think is really effective. I hadn't done this for a while so it was a good refresher.
 
 - I'm really happy with the visual design of the app and feel very confident using CSS and flexbox now.
+
+## Built with:
+
+- HTML
+- CSS
+- JavaScript
+
+## Getting Started:
+
+Clone the repo as instructed below
+
+## Prerequisites:
+
+No prerequisites
+
+## Installation
+
+1.  Clone the repo
+
+`git clone https://github.com/katiehawcutt/quiz-app.git`
+
+2. Run the index.html in a browser
+
+## Usage
+
+1. Press START to begin the quiz. There are 10 questions.
+2. The question will appear in the left box. Select TRUE or FALSE!
+3. Once you have selected true or false press GET ANSWER (in the middle)
+4. The answer will be revealed on the right and your score adjusted accordingly.
+5. Press NEXT QUESTION (in the middle) and continue the game.
+6. At the end of the game, your score will be revealed!
